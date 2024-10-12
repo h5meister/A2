@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dewei Zhang">
+    <title>My Basic Webpage</title>
+    <link rel="stylesheet" href="myStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="orange.png" alt="Logo" class="logo-img">
+        </div>
+
+        <ul class="navbar-items">
+            <li class="active"><a href="1.html"> MALL</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="3.html">CONTACT</a></li>
+            <li id="uname" style="color: #333;font-weight: bold;"></li>
+        </ul>
+
+        <div class="filter-condition">
+            <select name="" id="select1">
+                <option value="Brand">Brand</option>
+                <option value="ALL">ALL</option>
+                <option value="Nivea">Nivea</option>
+                <option value="OLAY">OLAY</option>
+                <option value="Dove">Dove</option>
+            </select>
+        </div>
+
+        <div class="navbar-right">
+            <a href="cart.html" class="cart-icon">
+                <img src="cart.png" alt="Shopping Cart">
+            </a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <header>
+        <ul class="indicator">
+            <li data-filter="all" class="active"><a href="#"></a></li>
+            <li data-filter="Nivea"><a href="#"></a></li>
+            <li data-filter="OLAY"><a href="#"></a></li>
+            <li data-filter="Dove"><a href="#"></a></li>
+        </ul>
+        <div class="filter-condition">
+            <span>View price as </span>
+            <select name=" " id="select">
+                <option value="Default"> Default</option>
+                <option value="LowToHigh"> Low to high</option>
+                <option value="HighToLow"> High to low</option>
+            </select>
+        </div>
+
+    </header>
+    <input type="text" id="searchInput" placeholder="Search by name">
+    <p>ID:22004319</p> <p>Name: Dewei Zhang</p>
+    <div class="product-field">
+        <ul class="items">
+            <li data-category="Nivea">
+                <picture>
+                    <img src="Q10%20Anti-Wrinkle%20Replenishing%20Night%20Cream.webp" alt="Q10 Anti-Wrinkle Replenishing Night Cream">
+                </picture>
+                <div class="detail">
+                    <strong>Nivea</strong>
+                    <span>Q10 Anti-Wrinkle Replenishing Night Cream</span>
+                    <small><a href="Q10 Anti-Wrinkle Replenishing Night Cream.html" >View more</a></small>
+                </div>
+                <h3>$14</h3>
+            </li>
+
+            <li data-category="Nivea">
+                <picture>
+                    <img src="Q10%20Anti-Wrinkle%20Expert%20Targeted%20Wrinkle%20Filler%20Serum.webp" alt="Q10 Anti-Wrinkle Expert Targeted Wrinkle Filler Serum">
+                </picture>
+                <div class="detail">
+                    <strong>Nivea</strong>
+                    <span>Q10 Anti-Wrinkle Expert Targeted Wrinkle Filler Serum</span>
+                    <small><a href="Q10 Anti-Wrinkle Expert Targeted Wrinkle Filler Serum.html" >View more</a></small>
+                </div>
+                <h3>$21</h3>
+            </li>
+
+            <li data-category="Nivea">
+                <picture>
+                    <img src="Cellular%20Filler%20Expert%20Replumping%20Hyaluronic%20Serum.png" alt="Cellular Filler Expert Replumping Hyaluronic Serum" style="width: 259px; height: 303px;">
+                </picture>
+                <div class="detail">
+                    <strong>Nivea</strong>
+                    <span>Cellular Filler Expert Replumping Hyaluronic Serum</span>
+                    <small><a href="Cellular Filler Expert Replumping Hyaluronic Serum.html" >View more</a></small>
+                </div>
+                <h3>$27</h3>
+            </li>
+
+            <li data-category="OLAY">
+                <picture>
+                    <img src="Olay%20Ultimate%20Eye%20Cream.jpg" alt="Olay Ultimate Eye Cream">
+                </picture>
+                <div class="detail">
+                    <strong>OLAY</strong>
+                    <span>Olay Ultimate Eye Cream</span>
+                    <small><a href="Olay Ultimate Eye Cream.html" >View more</a></small>
+                </div>
+                <h3>$30</h3>
+            </li>
+
+            <li data-category="OLAY">
+                <picture>
+                    <img src="Olay%20Gentle%20Cleansing%20Balm.jpg" alt="Olay Gentle Cleansing Balm">
+                </picture>
+                <div class="detail">
+                    <strong>OLAY</strong>
+                    <span>Olay Gentle Cleansing Balm</span>
+                    <small><a href="Olay Gentle Cleansing Balm.html" >View more</a></small>
+                </div>
+                <h3>$15</h3>
+            </li>
+
+            <li data-category="OLAY">
+                <picture>
+                    <img src="Regenerist%20Micro-Sculpting%20Cream%20Moisturizer.jpg" alt="Regenerist Micro-Sculpting Cream Moisturizer">
+                </picture>
+                <div class="detail">
+                    <strong>OLAY</strong>
+                    <span>Micro-Sculpting Cream Moisturizer</span>
+                    <small><a href="Regenerist%20Micro-Sculpting%20Cream%20Moisturizer.html" >View more</a></small>
+                </div>
+                <h3>$28</h3>
+            </li>
+
+            <li data-category="Dove">
+                <picture>
+                    <img src="Intensive%20Repair%203in1%20Serum%20Conditioner.avif" alt="Intensive Repair 3in1 Serum Conditioner">
+                </picture>
+                <div class="detail">
+                    <strong>Dove</strong>
+                    <span>Intensive Repair 3in1 Serum Conditioner</span>
+                    <small><a href="Intensive%20Repair%203in1%20Serum%20Conditioner.html" >View more</a></small>
+                </div>
+                <h3>$11</h3>
+            </li>
+
+            <li data-category="Dove">
+                <picture>
+                    <img src="Nourishing%20Moisture%203in1%20Serum%20Conditioner.avif" alt="Nourishing Moisture 3in1 Serum Conditioner">
+                </picture>
+                <div class="detail">
+                    <strong>Dove</strong>
+                    <span>Nourishing Moisture 3in1 Serum Conditioner</span>
+                    <small><a href="Nourishing%20Moisture%203in1%20Serum%20Conditioner.html" >View more</a></small>
+                </div>
+                <h3>$10</h3>
+            </li>
+
+            <li data-category="Dove">
+                <picture>
+                    <img src="Intensive%20Repair%20Shampoo.avif" alt="Intensive Repair Shampoo">
+                </picture>
+                <div class="detail">
+                    <strong>Dove</strong>
+                    <span>Intensive Repair Shampoo</span>
+                    <small><a href="Intensive%20Repair%20Shampoo.html" >View more</a></small>
+                </div>
+                <h3>$30</h3>
+            </li>
+        </ul>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; official contact e-mail: <a href="*******@ya***.com">*******@ya***.com </a> </p>
+    <h20>Contact Mall</h20>
+    </br></br></br></br>
+    <h30>Dealership Location:</h30>      <h45> XX XXXRoad  XXXXXX  Auckland</h45> </br></br>
+    <h30>Phone: </h30>                   <h46>XX XXX XXXX</h46> </br></br>
+    <h30>Opening Hours:</h30></br></br></br>
+    <h40>Monday - Thursday:</h40>        <h50>8:00am - 6:00pm</h50></br>
+    <h40>Friday:</h40>                   <h60>8:00am - 5:00pm</h60></br>
+    <h40>Saturday:</h40>                 <h70>9:00am - 4:00pm</h70></br>
+    <h40>Sunday:</h40>                   <h80>10.00am - 2.00pm</h80></br></br>
+
+    <h30>Send us an Enquiry:</h30></br></br>
+    <h40>Sales Department:</h40>         <h81><a href="*fake email">SA*****@ya***.com </a></h81></br>
+    <h40>Service Department:</h40>       <h82><a href="*fake email">SE*****@ya***.com </a></h82></br>
+    <h40>Finance and Insurance:</h40>    <h83><a href="*fake email">F******@ya***.com </a></h83></br>
+</footer>
+
+</body>
+</html>
+<script type="text/javascript" src="filter.js"></script>

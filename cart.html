@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dewei Zhang">
+    <title>cart</title>
+    <link rel="stylesheet" href="myStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        table {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            width: 80%;
+            margin: 262px auto;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        #special-image {
+            position: absolute;
+            top: 60px;
+            left: 800px;
+        }
+
+        h20{
+            font-size:50px;
+            top: 5;
+            left: 0;
+        }
+
+        h30{
+            font-size:20px;
+            margin-left: 50px;
+        }
+
+        #special-p {
+            max-width: 500px;
+            position: left;
+            margin-left: 50px;
+        }
+
+        #enquire-button {margin-left: 60px;}
+        h3{margin-left: 50px;}
+
+        .tooltip {
+            visibility: hidden;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .button-container:hover .tooltip {
+            visibility: visible;
+        }
+
+        .delete-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .delete-button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+
+<header>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="orange.png" alt="Logo" class="logo-img">
+        </div>
+
+
+            <li><a href="1.html"> MALL</a></li>
+
+            <li><a href="3.html">CONTACT</a></li>
+
+
+
+        <div class="navbar-right">
+            <a href="cart.html" class="cart-icon">
+                <img src="cart.png" alt="Shopping Cart">
+            </a>
+        </div>
+    </nav>
+</header>
+
+<table>
+    <thead>
+    <tr>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody id="cart-items"></tbody>
+    <tfoot>
+    <tr>
+        <td colspan="1">Total</td>
+        <td colspan="1" id="total-price" style="text-align: center">$0</td>
+        <td> <button id="checkout-btn" class="btn btn-success">Checkout</button>
+        </td>
+    </tr>
+    </tfoot>
+</table>
+
+<script>
+    function displayCart() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cartItemsContainer = document.getElementById('cart-items');
+        let totalPrice = 0;
+        cartItemsContainer.innerHTML = '';
+
+        if (cart.length === 0) {
+            cartItemsContainer.innerHTML = '<tr><td colspan="3">Your cart is empty</td></tr>';
+            document.getElementById('total-price').textContent = '$0';
+        } else {
+            cart.forEach(function(item, index) {
+                totalPrice += item.price;
+                let row = `<tr>
+                <td>${item.name}</td>
+                <td>$${item.price}</td>
+                <td><button class="delete-button" onclick="removeFromCart(${index})">Delete</button></td>
+            </tr>`;
+                cartItemsContainer.innerHTML += row;
+            });
+            document.getElementById('total-price').textContent = '$' + totalPrice;
+        }
+    }
+
+    function removeFromCart(index) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        displayCart();
+    }
+
+    window.onload = function() {
+        displayCart();
+        document.getElementById('checkout-btn').addEventListener('click', checkout);
+    };
+
+    function checkout() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        if (cart.length === 0) {
+            alert('Cannot checkout, your cart is empty.');
+        } else {
+            alert('Payment successful!');
+            localStorage.removeItem('cart');
+            displayCart();
+        }
+    }
+
+</script>
+
+
+
+<body>
+</body>
+<footer>
+    <p>&copy; official contact e-mail: <a href="*******@ya***.com">*******@ya***.com </a> </p>
+    <h20>Contact Mall</h20>
+    </br></br></br></br>
+    <h30>Dealership Location:</h30>      <h45> XX XXXRoad  XXXXXX  Auckland</h45> </br></br>
+    <h30>Phone: </h30>                   <h46>XX XXX XXXX</h46> </br></br>
+    <h30>Opening Hours:</h30></br></br></br>
+    <h40>Monday - Thursday:</h40>        <h50>8:00am - 6:00pm</h50></br>
+    <h40>Friday:</h40>                   <h60>8:00am - 5:00pm</h60></br>
+    <h40>Saturday:</h40>                 <h70>9:00am - 4:00pm</h70></br>
+    <h40>Sunday:</h40>                   <h80>10.00am - 2.00pm</h80></br></br>
+
+    <h30>Send us an Enquiry:</h30></br></br>
+    <h40>Sales Department:</h40>         <h81><a href="*fake email">SA*****@ya***.com </a></h81></br>
+    <h40>Service Department:</h40>       <h82><a href="*fake email">SE*****@ya***.com </a></h82></br>
+    <h40>Finance and Insurance:</h40>    <h83><a href="*fake email">F******@ya***.com </a></h83></br>
+</footer>
+
+</html>

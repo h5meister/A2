@@ -1,0 +1,157 @@
+body, h1, h2, h3, p, ul, li, a{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF2222;
+    color: #000;
+    padding: 10px 20px;
+    height: 60px;
+}
+
+.navbar .active {
+    background-color: #000;
+}
+
+.navbar-item {
+    margin-right: 20px;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+}
+
+.navbar-items {
+    display: flex;
+    gap: 20px;
+}
+
+.filter-condition {
+    display: flex;
+    align-items: center;
+    color: #000;
+    margin-left: 20px;
+}
+
+select {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+body{
+    background-color: #f2f2f2;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+main{
+    padding: 20px;
+}
+
+h1{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+span{
+    font-weight: bold;
+}
+
+.product-field ul.items li h3{
+    text-align: left;
+}
+
+.product-field ul.items li{
+    position: relative;
+}
+
+.product-field ul.items li small{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+strong{
+    display: block;
+    float: left;
+    font-size: 26px;
+}
+
+.indicator{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.product-field ul.items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-field ul.items li{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.product-field ul.items li img{
+    max-width: 100%;
+    height: auto;
+}
+
+footer{
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+a{
+    color: #007bff;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+ h20{
+     font-size:50px;
+     top: 5px;
+     left: 0;
+ }
+h30{font-size:20px;}
+h45{ margin-left: 100px;}
+h46{ margin-left: 217px;}
+h50{margin-left: 156px;}
+h60{margin-left: 238px;}
+h70{margin-left: 221px;}
+h80{margin-left: 228px;}
+h81{margin-left: 165px;}
+h82{margin-left: 153px;}
+h83{margin-left: 134px;}
+#special-image {
+    position: absolute;
+    top: 100px;
+    left: 800px;
+}

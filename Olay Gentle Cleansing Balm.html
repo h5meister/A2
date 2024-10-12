@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dewei Zhang">
+    <title>Olay Gentle Cleansing Balm</title>
+    <link rel="stylesheet" href="myStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        table {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            width: 80%;
+            margin: 262px auto;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        #special-image {
+            position: absolute;
+            top: 60px;
+            left: 800px;
+        }
+
+        h20{
+        font-size:50px;
+        top: 5;
+        left: 0;
+        }
+
+        h30{
+        font-size:20px;
+        margin-left: 50px;
+        }
+
+        #special-p {
+            max-width: 500px;
+            position: left;
+            margin-left: 50px;
+        }
+
+        #enquire-button {margin-left: 60px;}
+        #share-button {margin-left: 90px;}
+        h3{margin-left: 50px;}
+
+        .tooltip {
+            visibility: hidden;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .button-container:hover .tooltip {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="orange.png" alt="Logo" class="logo-img">
+        </div>
+
+        <li><a href="1.html" > MALL</a></li>
+
+        <div>
+            <li><a href="3.html" >CONTACT</a> </li>
+        </div>
+
+        <div class="navbar-right">
+            <a href="cart.html" class="cart-icon">
+                <img src="cart.png" alt="Shopping Cart">
+            </a>
+        </div>
+    </nav>
+</header>
+
+<h30>Olay Gentle Cleansing Balm</h30><h3>$15</h3></br></br>
+<p id="special-p">
+    WHAT IT DOES<br>
+    This clear, fragrance-free, non-greasy cleansing balm leaves your skin feeling fresh and primed for the rest of your routine.<br><br>
+
+    Skin Type & Concerns<br>
+    Skin Type<br>
+    • All Skin Types<br>
+    Skin Concerns<br>
+    • Safe for all skin types<br><br>
+
+    How to Use<br>
+    1. Use as first step in routine. Apply to dry skin.<br>
+
+    2. Massage balm in circular motions across face with fingertips, including over closed eyes for eye makeup removal.<br>
+
+    3. Rinse with water or damp cloth. Can be used morning or night.<br><br>
+    Ingredients<br>
+    CAPRYLIC/CAPRIC TRIGLYCERIDE, SORBETH-30 TETRAOLEATE, CETYL ETHYLHEXANOATE, COCO-CAPRYLATE/CAPRATE, TRIBEHENIN, POLYGLYCERYL-6 DISTEARATE, STEARYL BEHENATE, C18-36 ACID TRIGLYCERIDE, JOJOBA ESTERS, POLYGLYCERYL-3 BEESWAX, CETYL ALCOHOL, PHENOXYETHANOL, SORBITAN SESQUIOLEATE
+</p>
+<picture>
+    <img src="Olay%20Gentle%20Cleansing%20Balm.jpg" alt="Olay Gentle Cleansing Balm" id="special-image">
+</picture>
+
+<button id="enquire-button" onclick="addToCart('Olay Gentle Cleansing Balm', 15)">Add this to cart</button>
+
+<script>
+    function addToCart(productName, price) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({ name: productName, price: price });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(productName + " has been added to your cart.");
+    }
+</script>
+
+<div class="share-button-container" style="position: relative; display: inline-block;">
+    <button class="share-button" onclick="copyToClipboard()">Share this page</button>
+    <span class="tooltip" id="tooltip-text" style="visibility: hidden; display: none; position: absolute; bottom: 110%; left: 50%; transform: translateX(-50%); background-color: black; color: white; padding: 5px; border-radius: 5px;">
+        Copied to clipboard!
+    </span>
+</div>
+
+<script>
+    function copyToClipboard() {
+        const pageUrl = window.location.href;
+
+        navigator.clipboard.writeText(pageUrl).then(() => {
+            const tooltip = document.getElementById('tooltip-text');
+            tooltip.style.visibility = 'visible';
+            tooltip.style.display = 'block';
+            setTimeout(() => {
+                tooltip.style.visibility = 'hidden';
+                tooltip.style.display = 'none';
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+    }
+</script>
+
+<main>
+</main>
+<footer>
+    <p>&copy; official contact e-mail: <a href="*******@ya***.com">*******@ya***.com </a> </p>
+    <h20>Contact Mall</h20>
+    </br></br></br></br>
+    <h30>Dealership Location:</h30>      <h45> XX XXXRoad  XXXXXX  Auckland</h45> </br></br>
+    <h30>Phone: </h30>                   <h46>XX XXX XXXX</h46> </br></br>
+    <h30>Opening Hours:</h30></br></br></br>
+    <h40>Monday - Thursday:</h40>        <h50>8:00am - 6:00pm</h50></br>
+    <h40>Friday:</h40>                   <h60>8:00am - 5:00pm</h60></br>
+    <h40>Saturday:</h40>                 <h70>9:00am - 4:00pm</h70></br>
+    <h40>Sunday:</h40>                   <h80>10.00am - 2.00pm</h80></br></br>
+
+    <h30>Send us an Enquiry:</h30></br></br>
+    <h40>Sales Department:</h40>         <h81><a href="*fake email">SA*****@ya***.com </a></h81></br>
+    <h40>Service Department:</h40>       <h82><a href="*fake email">SE*****@ya***.com </a></h82></br>
+    <h40>Finance and Insurance:</h40>    <h83><a href="*fake email">F******@ya***.com </a></h83></br>
+</footer>
+</body>
+</html>
